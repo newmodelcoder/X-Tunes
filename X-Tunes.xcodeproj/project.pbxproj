@@ -308,12 +308,22 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				TargetAttributes = {
+					E2A365140E075EC700BB2545 = {
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "X-Tunes" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* X-Tunes */;
@@ -480,7 +490,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E24D2C960E949FDA00E298A9 /* Debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -489,7 +500,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E24D2C950E949FDA00E298A9 /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				SDKROOT = macosx;
 			};
 			name = Release;

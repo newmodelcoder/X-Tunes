@@ -20,5 +20,7 @@
 	<string>DeamonApplication</string>
 	<key>LSUIElement</key>
 	<true/>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>${EXECUTABLE_NAME} uses AppleEvents to control iTunes playback.</string>
 </dict>
 </plist>
