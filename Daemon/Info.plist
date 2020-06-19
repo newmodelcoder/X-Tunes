@@ -21,6 +21,6 @@
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSAppleEventsUsageDescription</key>
-	<string>${EXECUTABLE_NAME} uses AppleEvents to control iTunes playback.</string>
+	<string>${EXECUTABLE_NAME} uses AppleEvents to control playback of your music</string>
 </dict>
 </plist>
