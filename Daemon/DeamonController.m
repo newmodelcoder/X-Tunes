@@ -23,7 +23,7 @@
 #import "DeamonApplication.h"
 
 #define kUpdateInterval 500.0 //ms
-#define kiTunesName @"iTunes"
+#define kAppName @"Music"
 
 #define keyArrowLeft 0x7b
 #define keyArrowRight 0x7c
@@ -69,21 +69,21 @@ static NSString* _StringFromDuration(NSNumber* duration)
 - (void) applicationDidFinishLaunching:(NSNotification*)notification
 {
 	//Compile scripts
-	scriptPlay = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"if (player state is stopped) or (player state is paused) then\rplay\relse if (player state is fast forwarding) or (player state is rewinding) then\rpause\rplay\relse\rpause\rend if"];
-	scriptStop = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"stop"];
-	scriptFastForward = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"fast forward"];
-	scriptRewind = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"rewind"];
-	scriptNextTrack = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"next track"];
-	scriptPreviousTrack = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"back track"];
-	scriptTrackName = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"name of current track"];
-	scriptTrackArtist = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"artist of current track"];
-	scriptTrackAlbum = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"album of current track"];
-	scriptTrackDuration = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"duration of current track"];
-	scriptTrackID = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"database ID of current track"];
-	scriptPlayerPosition = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"player position"];
-	scriptPlayerVolume = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"sound volume"];
-	scriptPlayerVolumeUp = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"set sound volume to (sound volume + 10)\rsound volume"];
-	scriptPlayerVolumeDown = [[AppleScript alloc] initWithApplicationCommands:kiTunesName commands:@"set sound volume to (sound volume - 10)\rsound volume"];
+	scriptPlay = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"if (player state is stopped) or (player state is paused) then\rplay\relse if (player state is fast forwarding) or (player state is rewinding) then\rpause\rplay\relse\rpause\rend if"];
+	scriptStop = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"stop"];
+	scriptFastForward = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"fast forward"];
+	scriptRewind = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"rewind"];
+	scriptNextTrack = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"next track"];
+	scriptPreviousTrack = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"back track"];
+	scriptTrackName = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"name of current track"];
+	scriptTrackArtist = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"artist of current track"];
+	scriptTrackAlbum = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"album of current track"];
+	scriptTrackDuration = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"duration of current track"];
+	scriptTrackID = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"database ID of current track"];
+	scriptPlayerPosition = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"player position"];
+	scriptPlayerVolume = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"sound volume"];
+	scriptPlayerVolumeUp = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"set sound volume to (sound volume + 10)\rsound volume"];
+	scriptPlayerVolumeDown = [[AppleScript alloc] initWithApplicationCommands:kAppName commands:@"set sound volume to (sound volume - 10)\rsound volume"];
 	
 	//Set window parameters
 	[view setOpacity:[[NSUserDefaults standardUserDefaults] floatForKey:kXTunesPreferencesKey_Opacity]];
